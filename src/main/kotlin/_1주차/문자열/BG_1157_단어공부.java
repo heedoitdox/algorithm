@@ -1,4 +1,4 @@
-package 기초상식_문자열_기초수학;
+package _1주차.문자열;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.Objects;
 
 // https://www.acmicpc.net/problem/1157
 // 단어 공부
-public class BG_1157 {
+public class BG_1157_단어공부 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] str = br.readLine().toUpperCase().split("");

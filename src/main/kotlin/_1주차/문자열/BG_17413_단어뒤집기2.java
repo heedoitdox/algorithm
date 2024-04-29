@@ -1,4 +1,4 @@
-package 기초상식_문자열_기초수학;
+package _1주차.문자열;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Stack;
 
 // https://www.acmicpc.net/problem/17413
 // 단어 뒤집기
-public class BG_17413 {
+public class BG_17413_단어뒤집기2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

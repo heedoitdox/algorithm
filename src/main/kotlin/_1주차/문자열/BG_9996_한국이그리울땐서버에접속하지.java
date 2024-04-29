@@ -1,4 +1,4 @@
-package 기초상식_문자열_기초수학;
+package _1주차.문자열;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 // https://www.acmicpc.net/problem/9996
 // 9996번 - 한국이 그리울 땐 서버에 접속하지
-public class BG_9996 {
+public class BG_9996_한국이그리울땐서버에접속하지 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

@@ -1,4 +1,4 @@
-package 기초상식_문자열_기초수학;
+package _1주차.기초수학;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 // https://www.acmicpc.net/problem/2609
 // 최대공약수와 최소공배수
-public class BG_2609 {
+public class BG_2609_최대공약수와최소공배수 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
