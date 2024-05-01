@@ -1,5 +1,7 @@
 package _2주차.큐;
 
+import java.io.OutputStreamWriter;
+
 /**
  * 참고: https://www.acmicpc.net/source/39253977
  */
@@ -18,7 +20,7 @@ public class BG_18258_큐2_2 {
         int[] queue = new int[N];
         int tail = 0, head = 0;
 
-        BufferedWriter bw = new BufferedWriter();
+        MyBufferedWriter bw = new MyBufferedWriter(new OutputStreamWriter(System.out));
 
         while (N-- > 0) {
 
@@ -63,7 +65,7 @@ public class BG_18258_큐2_2 {
 }
 
 // 이걸 직접 만들어서 써야 속도가 빨라지는걸까?
-class BufferedWriter {
+class MyBufferedWriter {
 
     java.io.BufferedWriter bw;
     char[] buffer;
@@ -71,7 +73,7 @@ class BufferedWriter {
     int pointer;
     final int MAX_SIZE = 1024;
 
-    BufferedWriter() {
+    MyBufferedWriter(OutputStreamWriter outputStreamWriter) {
         bw = new java.io.BufferedWriter(new java.io.OutputStreamWriter(System.out));
         buffer = new char[MAX_SIZE];
         temp = new char[8];

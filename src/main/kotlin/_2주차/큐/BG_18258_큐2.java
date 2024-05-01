@@ -48,5 +48,6 @@ public class BG_18258_큐2 {
         }
 
         bw.flush();
+        bw.close();
     }
 }
