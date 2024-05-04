@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Stack;
 
 /**
- * 백준 1935 후위표기식2
+ * 백준 1935 후위표기식2 (필수)
  * https://www.acmicpc.net/problem/1935
  *
  * 풀이방법

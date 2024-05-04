@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 
 /**
+ * 백준 9012 괄호 (필수)
  * https://www.acmicpc.net/problem/9012
  * 시간: 152 ms
  */

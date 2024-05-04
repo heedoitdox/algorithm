@@ -1,4 +1,4 @@
-package _2주차.큐;
+package _2주차.스택;
 
 import java.io.*;
 import java.util.Stack;
