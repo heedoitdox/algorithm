@@ -9,6 +9,10 @@ import java.util.StringTokenizer;
  * 백준 11047 동전0
  * https://www.acmicpc.net/problem/11047
  * 참고: https://st-lab.tistory.com/143
+ *
+ * 필요한 동전 개수의 최솟값 -> 그리디 유추 가능
+ * 큰 값부터 비교해야함
+ * 시간복잡도는 동전의 총 종류에만 영향을 받음
  */
 public class BG_11047_동전0 {
 
@@ -29,8 +33,8 @@ public class BG_11047_동전0 {
 
         int count = 0;
 
+        // 큰수 부터 채워넣으려고 반대로 반복문
         for (int i = N - 1; i >= 0; i--) {
-
             // 현재 동전의 가치가 K보다 작거나 같아야지 구성가능하다.
             if (coin[i] <= K) {
                 // 현재 가치의 동전으로 구성할 수 있는 개수를 더해준다.

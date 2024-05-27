@@ -1,4 +1,4 @@
-package 구현;
+package 투포인터;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -55,11 +55,11 @@ public class BG_2531_회전초밥 {
             Set<Integer> set = new HashSet<>();
             int m = i;
             for(int l = 0; l < k; l++) { // k 개씩 묶은 리스트를 HashSet 에 추가해서 중복되지 않은 초밥의 수를 구한다.
-                set.add(chobab[m]);
-                m++;
-                if(m >= N) m = 0;
+                set.add(chobab[m]); // 초밥 추가
+                m++; // 반복자 증가
+                if(m >= N) m = 0; // 배열이 끝났다고 끝나면안되고 돌아가야하므로 배열에 끝에 위치하게 되면 다시 인덱스를 0으로 맞춘다.
             }
-            if(!set.contains(c)) result = Math.max(set.size()+1, result);
+            if(!set.contains(c)) result = Math.max(set.size()+1, result); // 쿠폰이 포함되어있지않으면 포함시킨
             else result = Math.max(set.size(), result); // 둘 중 더 큰 값을 result 에 저장
 
             i++;
@@ -68,3 +68,5 @@ public class BG_2531_회전초밥 {
         System.out.println(result);
     }
 }
+
+// 그림 참고: https://tussle.tistory.com/1007

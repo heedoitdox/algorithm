@@ -20,7 +20,7 @@ public class BG_1929_소수구하기 {
 
             if(i >= a) sb.append(i).append('\n');
 
-            for(int j = i + i; j <= b; j += i) {
+            for(int j = i + i; j <= b; j += i) { // 수의 배수들을 다 소수가 아닌 수로 만든다.
                 prime[j] = true;
             }
         }
