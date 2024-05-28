@@ -47,7 +47,7 @@ DP 는 특정한 경우에 사용하는 알고리즘이 아닌 하나의 방법�
    - 해당 기저 문제에 대해 파악 후 미리 배열 등에 저장해두면 된다.
 6) 구현한다.
    1. Bottom-Up (Tabulation 방식) - 반복문 사용
-   2. Top-Down (Memoization 방식) - 재귀 사용
+   2. Top-Down (Memoization 방식) - 완전탐색_재귀 사용
 
 [구현 방법]
 1. Bottom-Up 방식

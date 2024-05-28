@@ -1,4 +1,4 @@
-package 재귀;
+package 완전탐색_재귀;
 
 import java.io.BufferedReader;
 import java.io.IOException;
