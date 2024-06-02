@@ -36,11 +36,11 @@ public class BG_18511_큰수구성하기 {
     }
 
     public static void dfs(int num) {
-        if(num >  n) return;
+        if(num > n) return;
 
         if(ans < num) ans = num;
 
-        // 왜 뒤에부터 하는거지?
+        // 큰 수 부터 구성하기 위해 뒤에서 부터 반복문
         for (int i = k - 1; i >= 0; i--) {
             // *10 을 함으로써 자리수를 앞으로 밈
             // ex. 15 -> 150 + 7

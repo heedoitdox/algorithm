@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * nC3 의 경우의 수를 가진다.
  * 모든 수를 탐색하면서 더한다?
  */
 public class BG_2798_블랙잭 {
