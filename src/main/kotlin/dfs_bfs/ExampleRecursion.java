@@ -1,4 +1,4 @@
-package dfs;
+package dfs_bfs;
 
 public class ExampleRecursion {
     // 방문처리에 사용 할 배열선언
