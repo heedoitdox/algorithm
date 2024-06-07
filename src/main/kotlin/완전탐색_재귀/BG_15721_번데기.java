@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
+ * 문제 이해 필요
+ *
  * 백준 15721 번데기
  *
  * 뻔 데기 뻔 데기 뻔 뻔 데기 데기
@@ -33,7 +35,7 @@ public class BG_15721_번데기 {
         while(true) { // 테스트 케이스 만큼 반복문
             List<String> gameSet = makeGameString(n);
             for (String game : gameSet) {
-                
+
             }
         }
 
