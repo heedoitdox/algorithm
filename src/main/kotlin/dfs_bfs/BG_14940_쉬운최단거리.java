@@ -42,7 +42,7 @@ public class BG_14940_쉬운최단거리 {
                     goalY = j;
                 }
                 map[i][j] = Integer.parseInt(s[j]);
-                if(s[j].equals("0")) visited[i][j] = 0;
+                if(s[j].equals("0")) visited[i][j] = 0; // 해주지 않으면 방문하지 못해서 -1 로 남기 때문에 꼭! 해줘야함
                 else visited[i][j] = -1; // 도달할 수 없다를 기본으로 세팅해둔다
             }
         }
@@ -52,6 +52,7 @@ public class BG_14940_쉬운최단거리 {
         printResult();
     }
 
+    // 결과 출력
     private static void printResult() {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < n; i++) {

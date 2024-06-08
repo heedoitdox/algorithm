@@ -10,8 +10,7 @@ import java.util.StringTokenizer;
  * 백준 2606 바이러스
  * https://www.acmicpc.net/problem/2606
  *
- * 간선을 연결해줄 때는 무조건 양방향으로 연결해주어야한다!
- * 그런데 왜 꼭 양방향으로 연결해줘야할까?
+ * 간선을 연결해줄 때는 무조건 양방향으로 연결해줘야함
  *
  * 확실히 인접행렬 방식이 속도가 훨씬 빠름
  * 인접행렬: 108ms
@@ -79,11 +78,11 @@ public class BG_2606_바이러스 {
 
     // 인접 행렬 방식
     static void dfs2(int n) {
-        visited[n] = true;
+        visited[n] = true; // 방문함
 
         for(int i = 1; i < adj.length; i++) {
-            if(visited[i]) continue;
-            if(adj[n][i]) dfs2(i);
+            if(visited[i]) continue; // 이미 방문한 노드라면 건너띔
+            if(adj[n][i]) dfs2(i); // 방문하지 않은 대상의 노드는 다시 재귀호출
         }
     }
 }

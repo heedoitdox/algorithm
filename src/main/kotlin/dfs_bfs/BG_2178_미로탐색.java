@@ -36,7 +36,7 @@ public class BG_2178_미로탐색 {
         }
 
         bfs();
-        System.out.println(map[n-1][m-1]); // 시작점도 합쳐줘야한다.
+        System.out.println(map[n-1][m-1]);
     }
 
     static void bfs() {

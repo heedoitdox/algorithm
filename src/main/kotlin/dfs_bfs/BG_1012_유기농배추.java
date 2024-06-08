@@ -10,9 +10,11 @@ import java.util.StringTokenizer;
 /**
  * 백준 1012 유기농배추
  * https://www.acmicpc.net/problem/1012
+ *
+ * 가까운 노드부터 탐색하기 위해 BFS 사용
  */
 public class BG_1012_유기농배추 {
-    static int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}}; // 남 서 동 북
+    static int[][] dir = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}}; // 남 서 동 북
     static int m;
     static int n;
     static int[][] map;
@@ -35,14 +37,16 @@ public class BG_1012_유기농배추 {
             map = new int[n][m];
             for(int j = 0; j < k; j++) {
                 st = new StringTokenizer(br.readLine());
-                int n1 = Integer.parseInt(st.nextToken());
-                int n2 = Integer.parseInt(st.nextToken());
+                int n1 = Integer.parseInt(st.nextToken()); // x
+                int n2 = Integer.parseInt(st.nextToken()); // y
                 map[n2][n1] = 1;
             }
 
             visited = new boolean[n][m];
             queue = new LinkedList<>();
             cnt = 0;
+
+            // 2개의 반복문을 돌면서 모든 땅의 칸을 방문한다.
             for(int j = 0; j < n; j++) {
                 for(int l = 0; l < m; l++) {
                     bfs(map, j, l);
@@ -50,31 +54,31 @@ public class BG_1012_유기농배추 {
             }
 
             sb.append(cnt).append("\n");
-            cnt = 0;
+            cnt = 0; // 다음 테스트 케이스를 위해서 0 으로 초기화
         }
 
         System.out.println(sb);
     }
 
     static void bfs(int[][] map, int x, int y) {
-        if(visited[x][y] || map[x][y] == 0) return;
-        queue.add(new int[]{x, y});
-        visited[x][y] = true;
+        if(visited[x][y] || map[x][y] == 0) return; // 이미 방문했거나 배추가 없다면 return
+        queue.add(new int[]{x, y}); // 대상이 되는 땅을 queue 에 add
+        visited[x][y] = true; // 방문 체크
 
         while(!queue.isEmpty()) {
             int[] q = queue.poll();
-            for(int i = 0; i < dirs.length; i++) { // 남서동북 사방을 확인한다.
-                int tempX = q[0] + dirs[i][0];
-                int tempY = q[1] + dirs[i][1];
+            for(int i = 0; i < dir.length; i++) { // 동서남북 사방을 확인한다.
+                int tempX = q[0] + dir[i][0];
+                int tempY = q[1] + dir[i][1];
 
                 // 좌표들이 범위안에 있고, 배추가 심어져 있고, 방문한 적이 없다면
                 if(0 <= tempX && tempX < n && 0 <= tempY && tempY < m && map[tempX][tempY] == 1 && !visited[tempX][tempY]) {
                     queue.add(new int[]{tempX, tempY});
-                    visited[tempX][tempY] = true;
+                    visited[tempX][tempY] = true; // 방문 체크
                 }
             }
         }
 
-        cnt++;
+        cnt++; // 연결된 노드가 끝나면 1개의 묶인 구역이기 때문에 카운팅
     }
 }

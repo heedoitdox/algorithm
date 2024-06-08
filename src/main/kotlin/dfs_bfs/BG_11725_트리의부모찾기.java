@@ -23,8 +23,8 @@ public class BG_11725_트리의부모찾기 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
 
-        adj = new ArrayList[N+1];
-        for (int i=0; i<N+1; i++) adj[i] = new ArrayList <>();
+        adj = new ArrayList[N+1]; // 0 인덱스는 사용하지 않기 때문에 N+1 으로 할당
+        for (int i=0; i<N+1; i++) adj[i] = new ArrayList <>(); // 리스트 초기화
 
         for(int i = 1; i < N; i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
@@ -35,7 +35,7 @@ public class BG_11725_트리의부모찾기 {
         }
 
         visited = new boolean[N+1];
-        parent = new int[N+1];
+        parent = new int[N+1]; // 부모노드를 나타내는 배열을 따로 선언한다.
         dfs(1);
 
         StringBuilder sb = new StringBuilder();
