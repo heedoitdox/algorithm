@@ -35,6 +35,7 @@ public class BG_7576_토마토 {
 
         queue = new LinkedList<>();
         box = new int[n][m];
+        // 2차원이기때문에 2중 포문
         for(int i = 0; i < n; i++) {
             String[] s = br.readLine().split(" ");
             for(int j = 0; j < m; j++) {
@@ -50,7 +51,7 @@ public class BG_7576_토마토 {
         bfs();
 
         boolean flag = false;
-        for(int i = 0; i < n*m; i++) {
+        for(int i = 0; i < n*m; i++) { // 토마토가 다 익지 못하는 상황
             if(box[i/m][i%m] == 0) {
                 flag = true;
                 break;
@@ -64,15 +65,15 @@ public class BG_7576_토마토 {
     static void bfs(){
         while(!queue.isEmpty()) {
             int[] q = queue.poll();
-            day = q[2]; // depth 를 계속 갱신한다.
+            day = q[2]; // depth 를 계속 갱신한다. => 얼마만에 익었는지
 
             for(int i = 0; i < dir.length; i++) {
                 int x = q[0] + dir[i][0];
                 int y = q[1] + dir[i][1];
 
-                if(0 <= x && x < n && 0 <= y && y < m && box[x][y] == 0) {
-                    box[x][y] = 1;
-                    queue.offer(new int[]{x, y, q[2]+1});
+                if(0 <= x && x < n && 0 <= y && y < m && box[x][y] == 0) { // 인덱스를 벗어나지 않고 익지않은 토마토라면
+                    box[x][y] = 1; // 익음 처리
+                    queue.offer(new int[]{x, y, q[2]+1}); // depth + 1
                 }
             }
 

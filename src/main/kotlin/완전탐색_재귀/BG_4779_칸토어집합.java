@@ -30,11 +30,12 @@ public class BG_4779_칸토어집합 {
 
     static String cantorSet(String s) {
         // - 하나의 문자만 남았을 때 리턴
-        if(s.length() == 1) return s;
+        if(s.length() == 1) return s; // 남은 선의 길이가 1이면 멈춘다 -> 반복하면 모든 선의 길이가 1이 됨
         int section = s.length() / 3; // 항상 3으로 나누어떨어짐
 
-        String side = "-".repeat(section);
-        String middle = " ".repeat(section);
+        // 문자열을 새로 만든다
+        String side = "-".repeat(section); // 양 사이드에 더하기 위해
+        String middle = " ".repeat(section); // 가운데 문자열을 공백으로 바꾼다
 
         return cantorSet(side) + middle + cantorSet(side);
     }

@@ -29,7 +29,7 @@ public class BG_2231_분해합 {
 //                    .sum();
 
             if(sum == n) {
-                min = Math.min(min, n-i);
+                min = Math.min(min, n-i); // 가장 작은 생성자를 기록하기 위함
                 flag = true;
             }
         }

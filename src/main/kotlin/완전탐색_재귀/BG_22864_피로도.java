@@ -28,10 +28,10 @@ public class BG_22864_피로도 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
-        int c = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
+        int a = Integer.parseInt(st.nextToken()); // 쌓이는 피로도
+        int b = Integer.parseInt(st.nextToken()); // 처리할 수 있는 일
+        int c = Integer.parseInt(st.nextToken()); // 쉬면 줄어드는 피로도
+        int m = Integer.parseInt(st.nextToken()); // 넘기지 않을 피로도
 
         int w = 0;
         int tiredPoint = 0;
@@ -41,7 +41,7 @@ public class BG_22864_피로도 {
                 tiredPoint += a;
             }else {
                 tiredPoint -= c; // 쉬어서 해소되는 피로도
-                if(tiredPoint < 0) tiredPoint = 0; // 피로도가 음수라면 0으로 다시 세팅된다.
+                if(tiredPoint < 0) tiredPoint = 0; // 피로도가 음수라면 0으로 다시 세팅된다. <- 중요!
             }
         }
 

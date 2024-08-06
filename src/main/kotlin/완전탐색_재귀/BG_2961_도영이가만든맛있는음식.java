@@ -42,6 +42,7 @@ public class BG_2961_도영이가만든맛있는음식 {
             return;
         }
 
+        // 재료를 넣었을때와 넣지않았을때를 계속 타고 가면서 어떤 경우의 수의 차이가 제일 적은지 기록
         solve(cnt, level + 1, s, b); // 다음 재료를 넣지 않음
         solve(cnt+1, level + 1, s*S[level], b+B[level]); // 다음 재료를 넣음
     }

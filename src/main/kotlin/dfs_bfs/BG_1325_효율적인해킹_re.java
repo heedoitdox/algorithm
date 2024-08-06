@@ -24,7 +24,7 @@ public class BG_1325_효율적인해킹_re {
             st = new StringTokenizer(br.readLine());
             int n1 = Integer.parseInt(st.nextToken());
             int n2 = Integer.parseInt(st.nextToken());
-            arr[n1][n2] = 1; // 단방향으로 연결
+            arr[n1][n2] = 1; // 단방향으로 연결 <- 중요
         }
 
         for(int i = 1; i <= N; i++) {
@@ -51,7 +51,7 @@ public class BG_1325_효율적인해킹_re {
 
         for(int i = 1; i <= N; i++) {
             if(visited[i] == 1) continue;
-            if(arr[node][i] == 1) {
+            if(arr[node][i] == 1) { // 신뢰한다면
                 cnt[i]++;
                 dfs(i);
             }

@@ -19,11 +19,9 @@ public class BG_11720_숫자의합 {
         StringTokenizer st = new StringTokenizer(br.readLine(), "");
         int sum = 0;
         for(int i = 0; i < n; i++) {
-            sum += Integer.parseInt(st.nextToken());
+            sum += Integer.parseInt(st.nextToken()); // 입력 받음과 동시에 계속 더함
         }
 
         System.out.println(sum);
-
-        // Arrays.stream(str).mapToInt(Integer::parseInt).sum()
     }
 }
